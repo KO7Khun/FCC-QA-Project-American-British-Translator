@@ -5,6 +5,7 @@ const britishOnly = require('./british-only.js')
 
 class Translator {
   a2b(str) {
+    if(!str) return []
     let s1 = str.split(' ')
     let arr = []
     // replace the spelling first.
@@ -52,6 +53,7 @@ class Translator {
   }
 
   b2a(str) {
+    if(!str) return []
     let s1 = str.split(' ')
     let arr = []
     // american to british spelling
