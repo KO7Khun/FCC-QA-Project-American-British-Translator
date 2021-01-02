@@ -49,7 +49,16 @@ class Translator {
         arr.splice(arr.indexOf(i),1)
       }
     }
-    return [result, arr]
+
+    //added this to pass the unit tests to refactor the api route 
+    let displayTxt = result
+        for (let i of arr) {
+          if (result.includes(i)) {
+            displayTxt = displayTxt.replace(i, `<span class="highlight">${i}</span>`)
+          }
+        }
+
+    return [result, arr, displayTxt]
   }
 
   b2a(str) {
@@ -107,7 +116,15 @@ class Translator {
       }
     }
 
-    return [result, arr]
+    //added this to pass the unit tests to refactor the api route 
+    let displayTxt = result
+        for (let i of arr) {
+          if (result.includes(i)) {
+            displayTxt = displayTxt.replace(i, `<span class="highlight">${i}</span>`)
+          }
+        }
+
+    return [result, arr, displayTxt]
   }
 }
 

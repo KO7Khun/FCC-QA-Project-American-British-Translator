@@ -13,9 +13,7 @@ module.exports = function (app) {
         locale
       } = req.body
 
-      console.log(text)
-      console.log(locale)
-      console.log(req.body)
+
       // Error if there's no text to translate
       if (text === '') {
         return res.json({
